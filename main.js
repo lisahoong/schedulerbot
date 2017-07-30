@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
     console.log("param", req.body);
-    res.send('ok');
+    res.send(req.body.challenge);
 })
 
 app.get('/', (req, res) => {
