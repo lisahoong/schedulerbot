@@ -1,11 +1,13 @@
 const apiai = require('apiai');
 const express = require('express');
-
+const bodyParser = require('body-parser')
 const app = express();
 
-app.post('/:challenge', (req, res) => {
-    console.log("param", req.params.challenge);
-    res.send(req.params.challenge);
+app.use(bodyParser.json());
+
+app.post('/', (req, res) => {
+    console.log("param", req.body);
+    res.send('ok');
 })
 
 app.get('/', (req, res) => {
