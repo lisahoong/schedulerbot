@@ -16,7 +16,7 @@ app.post('/bot', (req, res) => {
     res.json({
         "speech": "wait is this working?",
         "displayText": "this should be some response dispaly text",
-        "data": {"slack": "this message is for sack"}
+        "data": {"slack": {<{"text": "hallo responding fro slack"}>}}
     });
 })
 
@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
     res.send('ok done')
 })
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;t
 app.listen(port, () => {console.log('App started! Listening on port: ', port)}
 );
