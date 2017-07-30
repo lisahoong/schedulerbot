@@ -16,7 +16,7 @@ app.post('/bot', (req, res) => {
     res.json({
         "speech": "wait is this working?",
         "displayText": "this should be some response dispaly text",
-        "data": {"slack": {{"text": "hallo responding fro slack"}}}
+        "data": {"slack": {"text": "hallo responding fro slack"}}
     });
 })
 
